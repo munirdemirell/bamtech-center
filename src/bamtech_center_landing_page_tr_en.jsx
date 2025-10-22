@@ -8,9 +8,9 @@ import { Beaker, Wrench, LineChart, Cpu, FlaskConical, Microscope, Mail, MapPin,
 // Slogan: “Bilimle Üreten Teknoloji / Research. Design. Verify.”
 
 export default function BAMTechLanding() {
-  const [lang, setLang] = useState<"tr" | "en">("tr");
+  const [lang, setLang] = useState("tr");
 
-  const t = (tr: string, en: string) => (lang === "tr" ? tr : en);
+  const t = (tr, en) => (lang === "tr" ? tr : en);
 
   const nav = [
     { id: "services", tr: "Hizmetler", en: "Services" },
@@ -20,7 +20,7 @@ export default function BAMTechLanding() {
     { id: "contact", tr: "İletişim", en: "Contact" },
   ];
 
-  const Section: React.FC<{ id?: string; children: React.ReactNode; className?: string }>=({ id, children, className }) => (
+  const Section = ({ id, children, className }) => (
     <section id={id} className={`max-w-7xl mx-auto px-6 md:px-10 ${className || "py-20"}`}>{children}</section>
   );
 
@@ -104,41 +104,17 @@ export default function BAMTechLanding() {
         <p className="mt-2 text-white/70 max-w-3xl">
           {t(
             "Akademik ve endüstriyel projeler için uçtan uca destek: metodoloji, veri toplama, cihaz geliştirme, analiz ve yayın süreci.",
-            "End‑to‑end support for academic and industrial projects: methodology, data acquisition, device development, analysis, and publications."
+            "End-to-end support for academic and industrial projects: methodology, data acquisition, device development, analysis, and publications."
           )}
         </p>
         <div className="mt-8 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {[
-            {
-              title: t("Araştırma Tasarımı","Research Design"),
-              desc: t("Hipotez, örneklem ve istatistiksel plan.","Hypothesis, sampling and statistical planning."),
-              icon: Beaker
-            },
-            {
-              title: t("Veri Toplama ve Analiz","Data Collection & Analysis"),
-              desc: t("Dijital ölçüm sistemleri, veri temizleme ve modelleme.","Digital metrology systems, data cleaning and modeling."),
-              icon: LineChart
-            },
-            {
-              title: t("Prototipleme & Üretim","Prototyping & Fabrication"),
-              desc: t("Mekatronik prototipler, test fikstürleri ve jigler.","Mechatronic prototypes, test fixtures and jigs."),
-              icon: Wrench
-            },
-            {
-              title: t("Biyomekanik Test","Biomechanical Testing"),
-              desc: t("Çiğneme simülatörleri ve kuvvet/yorulma testleri.","Chewing simulators and force/fatigue testing."),
-              icon: Microscope
-            },
-            {
-              title: t("Akademik Yazım & Yayın","Scientific Writing"),
-              desc: t("Makale, rapor ve etik süreç danışmanlığı.","Manuscripts, reports and ethics guidance."),
-              icon: FlaskConical
-            },
-            {
-              title: t("Dijital Ölçüm & Algoritmalar","Digital Metrology & Algorithms"),
-              desc: t("Sinyal işleme ve doğrulama protokolleri.","Signal processing and validation protocols."),
-              icon: Cpu
-            }
+            { title: t("Araştırma Tasarımı","Research Design"), desc: t("Hipotez, örneklem ve istatistiksel plan.","Hypothesis, sampling and statistical planning."), icon: Beaker },
+            { title: t("Veri Toplama ve Analiz","Data Collection & Analysis"), desc: t("Dijital ölçüm sistemleri, veri temizleme ve modelleme.","Digital metrology systems, data cleaning and modeling."), icon: LineChart },
+            { title: t("Prototipleme & Üretim","Prototyping & Fabrication"), desc: t("Mekatronik prototipler, test fikstürleri ve jigler.","Mechatronic prototypes, test fixtures and jigs."), icon: Wrench },
+            { title: t("Biyomekanik Test","Biomechanical Testing"), desc: t("Çiğneme simülatörleri ve kuvvet/yorulma testleri.","Chewing simulators and force/fatigue testing."), icon: Microscope },
+            { title: t("Akademik Yazım & Yayın","Scientific Writing"), desc: t("Makale, rapor ve etik süreç danışmanlığı.","Manuscripts, reports and ethics guidance."), icon: FlaskConical },
+            { title: t("Dijital Ölçüm & Algoritmalar","Digital Metrology & Algorithms"), desc: t("Sinyal işleme ve doğrulama protokolleri.","Signal processing and validation protocols."), icon: Cpu }
           ].map((card, i) => (
             <motion.div
               key={i}
@@ -164,11 +140,11 @@ export default function BAMTechLanding() {
             <p className="mt-2 text-white/70 max-w-2xl">
               {t(
                 "Yeni Nesil Çiğneme Simülatörü: 50–250N yük, 25mm strok, 1.5Hz frekans ile 5.000.000 çevrim test kapasitesi.",
-                "Next‑gen Chewing Simulator: 50–250N per‑stamp, 25mm stroke, 1.5Hz frequency, 5,000,000 cycle test capacity."
+                "Next-gen Chewing Simulator: 50–250N per-stamp, 25mm stroke, 1.5Hz frequency, 5,000,000 cycle test capacity."
               )}
             </p>
             <ul className="mt-4 space-y-2 text-sm text-white/80 list-disc list-inside">
-              <li>{t("Çok eksenli hareket ve hassas yük kontrolü","Multi‑axis motion with precise load control")}</li>
+              <li>{t("Çok eksenli hareket ve hassas yük kontrolü","Multi-axis motion with precise load control")}</li>
               <li>{t("Modüler fikstür ve güvenilirlik protokolleri","Modular fixturing and reliability protocols")}</li>
               <li>{t("Akademik yayın ve raporlama desteği","Academic publishing & reporting support")}</li>
             </ul>
