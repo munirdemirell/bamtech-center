@@ -132,27 +132,6 @@ export default function BAMTechLanding() {
         </div>
       </Section>
 
-      {/* Projects */}
-      <Section id="projects">
-        <div className="grid md:grid-cols-2 gap-8 items-start">
-          <div>
-            <h2 className="text-2xl md:text-3xl font-semibold">{t("Öne Çıkan Proje","Featured Project")}</h2>
-            <p className="mt-2 text-white/70 max-w-2xl">
-              {t(
-                "Yeni Nesil Çiğneme Simülatörü: 50–250N yük, 25mm strok, 1.5Hz frekans ile 5.000.000 çevrim test kapasitesi.",
-                "Next-gen Chewing Simulator: 50–250N per-stamp, 25mm stroke, 1.5Hz frequency, 5,000,000 cycle test capacity."
-              )}
-            </p>
-            <ul className="mt-4 space-y-2 text-sm text-white/80 list-disc list-inside">
-              <li>{t("Çok eksenli hareket ve hassas yük kontrolü","Multi-axis motion with precise load control")}</li>
-              <li>{t("Modüler fikstür ve güvenilirlik protokolleri","Modular fixturing and reliability protocols")}</li>
-              <li>{t("Akademik yayın ve raporlama desteği","Academic publishing & reporting support")}</li>
-            </ul>
-          </div>
-          <div className="rounded-3xl overflow-hidden ring-1 ring-white/10 bg-[#0F1C2E]/40 min-h-64" />
-        </div>
-      </Section>
-
       {/* Labs */}
       <Section id="labs">
         <h2 className="text-2xl md:text-3xl font-semibold">{t("Laboratuvar Altyapısı","Laboratory Infrastructure")}</h2>
