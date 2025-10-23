@@ -169,7 +169,7 @@ export default function BAMTechLanding() {
             <p className="mt-2 text-white/70">{t("Bize projenizi anlatın, birlikte planlayalım.","Tell us about your project — let’s plan together.")}</p>
             <div className="mt-6 space-y-3 text-white/80">
               <div className="flex items-center gap-3"><Mail className="size-5"/><a href="mailto:info@bamtechcenter.com" className="hover:underline">info@bamtechcenter.com</a></div>
-              <div className="flex items-center gap-3"><Phone className="size-5"/><span>+90 (___) ___ __ __</span></div>
+              <div className="flex items-center gap-3"><Phone className="size-5"/><span>+90 (544) 96 99 226(BAM) </span></div>
               <div className="flex items-center gap-3"><MapPin className="size-5"/><span>{t("Türkiye","Türkiye")}</span></div>
             </div>
           </div>
