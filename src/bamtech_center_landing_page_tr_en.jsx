@@ -5,7 +5,7 @@ import { Beaker, Wrench, LineChart, Cpu, FlaskConical, Microscope, Mail, MapPin,
 // One-file landing page for bamtechcenter.com
 // TailwindCSS + framer-motion + lucide-react
 // Palette: Metallic Navy #0F1C2E, Black #0A0A0A, Cyan/Teal Accent #00B3B3, Light Gray #F4F6F8
-// Slogan: “Dijital Diş Teknolojisi Araştırma ve Uygulama Merkezi / Research. Design. Verify.”
+// Slogan: “Dijital Dental Teknoloji Araştırma ve Uygulama Merkezi / Research. Design. Verify.”
 
 export default function BAMTechLanding() {
   const [lang, setLang] = useState("tr");
@@ -36,7 +36,7 @@ export default function BAMTechLanding() {
             </div>
             <div className="leading-tight">
               <div className="font-semibold tracking-wide">BAMTech Center</div>
-              <div className="text-xs text-white/60">{t("BAM Teknoloji ve Araştırma Merkezi","Technology & Research Center")}</div>
+              <div className="text-xs text-white/60">{t("BAM Dijital Dental Teknoloji ve Araştırma Merkezi","Digital Dental Technology & Research Center")}</div>
             </div>
           </div>
 
@@ -62,7 +62,7 @@ export default function BAMTechLanding() {
         <div className="grid md:grid-cols-2 gap-10 md:gap-16 items-center">
           <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
             <h1 className="text-4xl md:text-6xl font-bold leading-[1.1]">
-              {t("Dijital Diş Teknolojisi Araştırma ve Uygulama Merkezi", "Digital Dental Technology & Research Center")}
+              {t("Dijital Dental Teknoloji Araştırma ve Uygulama Merkezi", "Digital Dental Technology & Research Center")}
             </h1>
             <p className="mt-5 text-white/70 max-w-xl">
               {t(
