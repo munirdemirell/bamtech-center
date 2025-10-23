@@ -36,7 +36,7 @@ export default function BAMTechLanding() {
             </div>
             <div className="leading-tight">
               <div className="font-semibold tracking-wide">BAMTech Center</div>
-              <div className="text-xs text-white/60">{t("BAM Dijital Dental Teknoloji ve Araştırma Merkezi","Digital Dental Technology & Research Center")}</div>
+              <div className="text-xs text-white/60">{t("Dijital Dental Teknoloji ve Araştırma Merkezi","Digital Dental Technology & Research Center")}</div>
             </div>
           </div>
 
