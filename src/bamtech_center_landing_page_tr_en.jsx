@@ -201,19 +201,24 @@ export default function BAMTechLanding() {
       </Section>
 
       {/* Footer */}
-      <footer className="border-t border-white/10">
-        <Section className="py-10">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-white/60">
-            <div>© {new Date().getFullYear()} BAMTech Center</div>
-            <div className="flex items-center gap-4">
-              <a href="#" className="hover:text-white">LinkedIn</a>
-              <a href="#" className="hover:text-white">Instagram</a>
-              <a href="#" className="hover:text-white">X</a>
-              <a href="#" className="hover:text-white">YouTube</a>
-            </div>
-          </div>
-        </Section>
-      </footer>
+<footer className="border-t border-white/10">
+  <Section className="py-10">
+    <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-white/60">
+      <div>© {new Date().getFullYear()} BAMTech Center</div>
+      <div className="flex items-center gap-4">
+        <a
+          href="https://www.instagram.com/bamtechcenter/?utm_source=ig_web_button_share_sheet"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:text-white"
+        >
+          @bamtechcenter
+        </a>
+      </div>
+    </div>
+  </Section>
+</footer>
+>
     </div>
   );
 }
