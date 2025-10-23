@@ -30,15 +30,21 @@ export default function BAMTechLanding() {
       <header className="sticky top-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-[#0A0A0A]/70">
         <div className="max-w-7xl mx-auto px-6 md:px-10 py-3 flex items-center justify-between">
           {/* Logo/Wordmark */}
-          <div className="flex items-center gap-3">
-            <div className="size-9 rounded-2xl bg-gradient-to-br from-[#0F1C2E] to-[#00B3B3] grid place-items-center shadow-lg">
-              <FlaskConical className="size-5" />
-            </div>
-            <div className="leading-tight">
-              <div className="font-semibold tracking-wide">BAMTech Center</div>
-              <div className="text-xs text-white/60">{t("BAM Teknoloji ve Araştırma Merkezi","Technology & Research Center")}</div>
-            </div>
-          </div>
+          <div className="mt-6 space-y-3 text-white/80">
+  <div className="flex items-center gap-3"><Mail className="size-5"/><a href="mailto:info@bamtechcenter.com" className="hover:underline">info@bamtechcenter.com</a></div>
+  <div className="flex items-center gap-3"><Phone className="size-5"/><span>+90 (___) ___ __ __</span></div>
+  <div className="flex items-center gap-3"><MapPin className="size-5"/><span>{t("Türkiye","Türkiye")}</span></div>
+  <div className="flex items-center gap-3">
+    <a href="https://www.instagram.com/bamtechcenter" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:underline">
+      <svg xmlns="http://www.w3.org/2000/svg" className="size-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5z" />
+        <circle cx="12" cy="12" r="3.5" />
+        <circle cx="17.5" cy="6.5" r=".5" />
+      </svg>
+      <span>@bamtechcenter</span>
+    </a>
+  </div>
+</div>
 
           {/* Nav + Lang */}
           <nav className="hidden md:flex items-center gap-6">
