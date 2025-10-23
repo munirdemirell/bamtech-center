@@ -167,18 +167,59 @@ export default function BAMTechLanding() {
         </div>
       </Section>
 
-      {/* Contact */}
-      <Section id="contact">
-        <div className="grid lg:grid-cols-2 gap-10">
-          <div>
-            <h2 className="text-2xl md:text-3xl font-semibold">{t("İletişim","Contact")}</h2>
-            <p className="mt-2 text-white/70">{t("Bize projenizi anlatın, birlikte planlayalım.","Tell us about your project — let’s plan together.")}</p>
-            <div className="mt-6 space-y-3 text-white/80">
-              <div className="flex items-center gap-3"><Mail className="size-5"/><a href="mailto:info@bamtechcenter.com" className="hover:underline">info@bamtechcenter.com</a></div>
-              <div className="flex items-center gap-3"><Phone className="size-5"/><span>+90 (___) ___ __ __</span></div>
-              <div className="flex items-center gap-3"><MapPin className="size-5"/><span>{t("Türkiye, İstanbul","Türkiye, Istanbul")}</span></div>
-            </div>
-          </div>
+     {/* Contact */}
+<Section id="contact">
+  <div className="grid lg:grid-cols-2 gap-10">
+    {/* Left Column */}
+    <div>
+      <h2 className="text-2xl md:text-3xl font-semibold">
+        {t("İletişim", "Contact")}
+      </h2>
+      <p className="mt-2 text-white/70">
+        {t(
+          "Bize projenizi anlatın, birlikte planlayalım.",
+          "Tell us about your project — let’s plan together."
+        )}
+      </p>
+
+      <div className="mt-6 space-y-3 text-white/80">
+        {/* Mail */}
+        <div className="flex items-center gap-3">
+          <Mail className="size-5" />
+          <a
+            href="mailto:info@bamtechcenter.com"
+            className="hover:underline"
+          >
+            info@bamtechcenter.com
+          </a>
+        </div>
+
+        {/* Phone */}
+        <div className="flex items-center gap-3">
+          <Phone className="size-5" />
+          <span>+90 (___) ___ __ __</span>
+        </div>
+
+        {/* Location */}
+        <div className="flex items-center gap-3">
+          <MapPin className="size-5" />
+          <span>{t("Türkiye", "Türkiye")}</span>
+        </div>
+
+        {/* Instagram */}
+        <div className="flex items-center gap-3">
+          <Instagram className="size-5" />
+          <a
+            href="https://www.instagram.com/bamtechcenter"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:underline"
+          >
+            @bamtechcenter
+          </a>
+        </div>
+      </div>
+    </div>
           <form
   action="https://formsubmit.co/info@bamtechcenter.com"
   method="POST"
