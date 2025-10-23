@@ -173,15 +173,30 @@ export default function BAMTechLanding() {
               <div className="flex items-center gap-3"><MapPin className="size-5"/><span>{t("Türkiye","Türkiye")}</span></div>
             </div>
           </div>
-          <form className="bg-white/5 border border-white/10 rounded-2xl p-6 grid gap-4">
-            <div className="grid md:grid-cols-2 gap-4">
-              <input className="bg-white/10 rounded-xl px-4 py-3 placeholder:text-white/50" placeholder={t("Ad Soyad","Full Name")} />
-              <input className="bg-white/10 rounded-xl px-4 py-3 placeholder:text-white/50" placeholder="Email" type="email"/>
-            </div>
-            <input className="bg-white/10 rounded-xl px-4 py-3 placeholder:text-white/50" placeholder={t("Konu","Subject")} />
-            <textarea className="bg-white/10 rounded-xl px-4 py-3 h-32 placeholder:text-white/50" placeholder={t("Mesajınız","Your Message")} />
-            <button className="justify-self-start px-5 py-3 rounded-xl bg-[#00B3B3] text-[#0A0A0A] font-medium hover:brightness-110">{t("Gönder","Send")}</button>
-          </form>
+          <form
+  action="https://formsubmit.co/info@bamtechcenter.com"
+  method="POST"
+  className="bg-white/5 border border-white/10 rounded-2xl p-6 grid gap-4"
+>
+  {/* Güvenlik/Honeypot (bot engelleme) */}
+  <input type="text" name="_honey" className="hidden" />
+  {/* FormSubmit captcha kapat */}
+  <input type="hidden" name="_captcha" value="false" />
+  {/* Mail konusu */}
+  <input type="hidden" name="_subject" value="BAMTech Center: Yeni iletişim mesajı" />
+  {/* Gönderim sonrası yönlenecek sayfa (istersen değiştir) */}
+  <input type="hidden" name="_next" value="https://bamtechcenter.com/#contact" />
+
+  <div className="grid md:grid-cols-2 gap-4">
+    <input name="name" className="bg-white/10 rounded-xl px-4 py-3" placeholder="Ad Soyad" required />
+    <input name="email" type="email" className="bg-white/10 rounded-xl px-4 py-3" placeholder="Email" required />
+  </div>
+  <input name="subject" className="bg-white/10 rounded-xl px-4 py-3" placeholder="Konu" />
+  <textarea name="message" className="bg-white/10 rounded-xl px-4 py-3 h-32" placeholder="Mesajınız" required />
+  <button type="submit" className="justify-self-start px-5 py-3 rounded-xl bg-[#00B3B3] text-[#0A0A0A] font-medium hover:brightness-110">
+    Gönder
+  </button>
+</form>
         </div>
       </Section>
 
